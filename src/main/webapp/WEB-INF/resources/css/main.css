@@ -1,0 +1,27 @@
+html {
+	background-color: #1b1b1a;
+}
+
+body {
+	background: #0d0d0d url("../img/logo.jpg") no-repeat right top;
+	min-height: 1000px;
+	padding: 20px;
+	margin: 5px;
+}
+
+a {
+	color: #FFD200;
+	outline: none !important;
+}
+
+a:hover {
+	color: #FFAD00;
+	text-decoration: none;
+	outline: none !important;
+}
+
+h4 {
+	color: red;
+	text-transform: uppercase;
+	cursor: default;
+}

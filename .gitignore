@@ -1,2 +1,6 @@
 target
 .git
+.classpath
+.project
+.settings
+.springBeans
