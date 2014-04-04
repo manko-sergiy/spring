@@ -22,10 +22,15 @@ import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.DispatcherServlet;
 
 public class AppInitializer implements WebApplicationInitializer {
-	private static final Log LOG = LogFactory.getLog(AppInitializer.class);
+	private static Log LOG = LogFactory.getLog(AppInitializer.class);
 	private static final String CONFIG_LOCATION = "com.manko.example.config";
 	private static final String MAPPING_URL = "/";
 
+	{
+		LOG.debug(" - - - - - AppInitializer inited");
+		LOG.info(" - - - - - AppInitializer inited");
+	}
+	
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		LOG.info(" - - - - - AppInitializer onStartup(ServletContext servletContext)");
