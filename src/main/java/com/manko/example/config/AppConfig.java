@@ -15,17 +15,19 @@ import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 @Configuration
 @ComponentScan(basePackages = "com.manko.example")
 class AppConfig {
-	private static final Log LOG = LogFactory.getLog(AppConfig.class);
-	
-	@Bean
-	public SimpleMappingExceptionResolver simpleMappingExceptionResolver() {
-		LOG.info(" - - - - - AppConfig simpleMappingExceptionResolver()");
-		SimpleMappingExceptionResolver simpleMEResolver = new SimpleMappingExceptionResolver();
-		Properties mappings = new Properties();
-		mappings.put("org.springframework.web.servlet.PageNotFound", "p404");
-		mappings.put("org.springframework.dao.DataAccessException", "dataAccessFailure");
-		mappings.put("org.springframework.transaction.TransactionException", "dataAccessFailure");
-		simpleMEResolver.setExceptionMappings(mappings);
-		return simpleMEResolver;
-	}
+    private static final Log LOG = LogFactory.getLog(AppConfig.class);
+
+    @Bean
+    public SimpleMappingExceptionResolver simpleMappingExceptionResolver() {
+	LOG.info(" - - - - - AppConfig simpleMappingExceptionResolver()");
+	SimpleMappingExceptionResolver simpleMEResolver = new SimpleMappingExceptionResolver();
+	Properties mappings = new Properties();
+	mappings.put("org.springframework.web.servlet.PageNotFound", "p404");
+	mappings.put("org.springframework.dao.DataAccessException",
+		"dataAccessFailure");
+	mappings.put("org.springframework.transaction.TransactionException",
+		"dataAccessFailure");
+	simpleMEResolver.setExceptionMappings(mappings);
+	return simpleMEResolver;
+    }
 }
